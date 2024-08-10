@@ -1,0 +1,123 @@
+/* Estilos globales */
+body {
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+    background: url('C:/Users/Acer/Desktop/Jóvenes a Programar 2024/FASE II/Ejercicios/Semana 3/Página/Imágenes/Background/The Pools Backroom.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    color: #3b0f0c; /* Color de texto principal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #d87474; /* Acento uno */
+}
+
+#introduccion, .experiencia, .proyectos {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.cuadro-texto {
+    background-color: #f5ab8f; /* Acento dos */
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px dotted #250404; /* Punteado decorativo */
+    box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el texto y las imágenes */
+}
+
+.imagen-personal, .imagen-central {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px; /* Tamaño equilibrado para fotos de usuario */
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #d87474; /* Acento uno */
+    box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
+    border: 2px dotted #250404; /* Borde punteado */
+}
+
+.imagen-proyecto {
+    display: block;
+    margin: 20px auto;
+    max-width: 300px; /* Tamaño estándar para imágenes de proyectos */
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #d87474; /* Acento uno */
+    box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
+    border: 2px dotted #250404; /* Borde punteado */
+}
+
+#titulo-principal {
+    color: #740b0b; /* Color de texto principal */
+}
+
+#contacto {
+    width: 250px; /* Reducir el ancho */
+    background-color: rgba(59, 59, 61, 0.9); /* Color con transparencia */
+    text-align: center;
+    color: #fff; /* Texto blanco */
+    position: fixed;
+    bottom: 20px; /* Separación del borde inferior */
+    right: 20px; /* Separación del borde derecho */
+    padding: 10px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+}
+
+#contacto .cuadro-texto {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 10px;
+}
+
+h2 {
+    color: #740b0b; /* Color de texto principal */
+}
+
+p, ul {
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+a {
+    color: #d87474; /* Acento uno */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.icono {
+    width: 20px; /* Tamaño miniatura */
+    height: 20px; /* Tamaño miniatura */
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.icono:hover {
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+section, footer {
+    animation: scroll 1s ease-in-out;
+}
