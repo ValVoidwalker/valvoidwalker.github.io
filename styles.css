@@ -1,11 +1,10 @@
-/* Estilos globales */
 body {
     font-family: 'VT323', monospace;
     margin: 0;
     padding: 0;
-    background: url('C:/Users/Acer/Desktop/Jóvenes a Programar 2024/FASE II/Ejercicios/Semana 3/Página/Imágenes/Background/The Pools Backroom.jpg') no-repeat center center fixed; /* Imagen de fondo */
-    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
-    color: #3b0f0c; /* Color de texto principal */
+    background: url('Imágenes/Background/The Pools Backroom.jpg') no-repeat center center fixed; 
+    background-size: cover; 
+    color: #3b0f0c; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +15,7 @@ header {
     width: 100%;
     text-align: center;
     padding: 20px;
-    background-color: #d87474; /* Acento uno */
+    background-color: #d87474; 
 }
 
 #introduccion, .experiencia, .proyectos {
@@ -26,52 +25,51 @@ header {
 }
 
 .cuadro-texto {
-    background-color: #f5ab8f; /* Acento dos */
+    background-color: #f5ab8f; 
     padding: 20px;
     border-radius: 15px;
-    border: 2px dotted #250404; /* Punteado decorativo */
+    border: 2px dotted #250404; 
     box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
     margin-bottom: 20px;
-    text-align: center; /* Centrar el texto y las imágenes */
+    text-align: center; 
 }
 
 .imagen-personal, .imagen-central {
     display: block;
     margin: 20px auto;
-    max-width: 200px; /* Tamaño equilibrado para fotos de usuario */
+    max-width: 200px; 
     height: auto;
     border-radius: 50%;
-    border: 5px solid #d87474; /* Acento uno */
+    border: 5px solid #d87474; 
     box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
-    border: 2px dotted #250404; /* Borde punteado */
+    border: 2px dotted #250404; 
 }
 
 .imagen-proyecto {
     display: block;
     margin: 20px auto;
-    max-width: 300px; /* Tamaño estándar para imágenes de proyectos */
+    max-width: 300px; 
     height: auto;
     border-radius: 10px;
-    border: 3px solid #d87474; /* Acento uno */
+    border: 3px solid #d87474; 
     box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
-    border: 2px dotted #250404; /* Borde punteado */
+    border: 2px dotted #250404;
 }
 
 #titulo-principal {
-    color: #740b0b; /* Color de texto principal */
+    color: #740b0b; 
 }
 
 #contacto {
-    width: 250px; /* Reducir el ancho */
-    background-color: rgba(59, 59, 61, 0.9); /* Color con transparencia */
+    width: 250px; 
+    background-color: rgba(59, 59, 61, 0.9); 
     text-align: center;
-    color: #fff; /* Texto blanco */
+    color: #fff; 
     position: fixed;
-    bottom: 20px; /* Separación del borde inferior */
-    right: 20px; /* Separación del borde derecho */
-    padding: 10px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+    bottom: 20px; 
+    right: 20px; 
+    padding: 10px;    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
 #contacto .cuadro-texto {
@@ -81,7 +79,7 @@ header {
 }
 
 h2 {
-    color: #740b0b; /* Color de texto principal */
+    color: #740b0b; 
 }
 
 p, ul {
@@ -94,7 +92,7 @@ ul {
 }
 
 a {
-    color: #d87474; /* Acento uno */
+    color: #d87474; 
     text-decoration: none;
 }
 
@@ -103,8 +101,8 @@ a:hover {
 }
 
 .icono {
-    width: 20px; /* Tamaño miniatura */
-    height: 20px; /* Tamaño miniatura */
+    width: 20px; 
+    height: 20px; 
     margin: 0 10px;
     transition: transform 0.3s ease;
 }
