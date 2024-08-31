@@ -2,9 +2,9 @@ body {
     font-family: 'VT323', monospace;
     margin: 0;
     padding: 0;
-    background: url('Imágenes/Background/The Pools Backroom.jpg') no-repeat center center fixed; 
-    background-size: cover; 
-    color: #3b0f0c; 
+    background: url("Imágenes/Background/The Pools Backroom.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #3b0f0c;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,62 +14,109 @@ body {
 header {
     width: 100%;
     text-align: center;
-    padding: 20px;
-    background-color: #d87474; 
+    padding: 5px; /* Reduce en adicional del padding */
+    background: linear-gradient(to right, #9C3B39, #E1894F);
+    border: 2px solid #3A0710;
+    backdrop-filter: blur(10px);
+    border-radius: 15px; 
+    position: relative; 
+}
+
+.imagen-central {
+    display: block;
+    margin: -20px auto 10px; /* Ajusta el margen negativo para que sobresalga menos */
+    max-width: 150px; /* Es para ajustar el tamaño según sea necesario, idk */
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #E1894F;
+    box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
+}
+
+#contenido-principal {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.contenedor-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #introduccion, .experiencia, .proyectos {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px 0;
+    flex: 0 1 45%;
+    box-sizing: border-box;
+    position: relative; 
+    margin-bottom: 20px; 
+    backdrop-filter: blur(10px);
+    border-radius: 15px; 
+    border: 2px solid #3A0710; 
+    background: linear-gradient(to right, #E1894F, #852E2E, 0.7); 
+    padding: 20px; 
 }
 
 .cuadro-texto {
-    background-color: #f5ab8f; 
+    background-color: rgba(245, 171, 143, 0.7); 
     padding: 20px;
-    border-radius: 15px;
-    border: 2px dotted #250404; 
+    border-radius: 15px; 
+    border: none; /* Esto fue para sacar los feos bordes punteados, diosmio, eran horribles */
     box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
     margin-bottom: 20px;
-    text-align: center; 
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px); /* Hace que se desenfoque el fondo, que genial */
 }
 
-.imagen-personal, .imagen-central {
-    display: block;
-    margin: 20px auto;
-    max-width: 200px; 
-    height: auto;
-    border-radius: 50%;
-    border: 5px solid #d87474; 
-    box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
-    border: 2px dotted #250404; 
+.cuadro-texto::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    background: linear-gradient(to right, #E1894F, #852E2E); 
+    z-index: -1; 
 }
 
-.imagen-proyecto {
+.imagen-personal, .imagen-proyecto {
     display: block;
     margin: 20px auto;
-    max-width: 300px; 
+    max-width: 80%;
     height: auto;
-    border-radius: 10px;
-    border: 3px solid #d87474; 
+    border-radius: 10px; 
+    border: 3px solid #FFFFFF; 
     box-shadow: 0 0 10px rgba(36, 4, 4, 0.808);
-    border: 2px dotted #250404;
 }
 
 #titulo-principal {
-    color: #740b0b; 
+    color: #740b0b;
 }
 
 #contacto {
-    width: 250px; 
-    background-color: rgba(59, 59, 61, 0.9); 
+    width: 250px;
+    background-color: rgba(59, 59, 61, 0.9);
     text-align: center;
-    color: #fff; 
+    color: #fff;
     position: fixed;
-    bottom: 20px; 
-    right: 20px; 
-    padding: 10px;    border-radius: 15px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    bottom: 20px;
+    left: 20px;
+    padding: 15px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Mejora la sombra */
+    transition: all 0.3s ease; /* Añadí una transición para los efectos suaves */
+    animation: fadeInUp 0.5s ease-in-out; /* Es una animación al aparecer */
+    border: 2px solid #d87474; 
+    box-shadow: 0 0 20px rgba(216, 116, 116, 0.6); 
+}
+
+#contacto:hover {
+    background: linear-gradient(45deg, rgba(79, 79, 81, 0.8), rgba(59, 59, 61, 0.9)); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); 
 }
 
 #contacto .cuadro-texto {
@@ -78,8 +125,27 @@ header {
     padding: 10px;
 }
 
+#contacto p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-weight: bold; 
+}
+
+.boton-contacto {
+    background-color: #d87474; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-contacto:hover {
+    background-color: #c56161; 
+}
+
 h2 {
-    color: #740b0b; 
+    color: #740b0b;
 }
 
 p, ul {
@@ -92,7 +158,7 @@ ul {
 }
 
 a {
-    color: #d87474; 
+    color: #d87474;
     text-decoration: none;
 }
 
@@ -101,8 +167,8 @@ a:hover {
 }
 
 .icono {
-    width: 20px; 
-    height: 20px; 
+    width: 20px;
+    height: 20px;
     margin: 0 10px;
     transition: transform 0.3s ease;
 }
@@ -111,11 +177,84 @@ a:hover {
     transform: scale(1.1);
 }
 
-@keyframes scroll {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 section, footer {
     animation: scroll 1s ease-in-out;
+}
+
+/* PARTE DEL DISEÑO RESPONSIVE */
+
+/* EN RESOLUCION ESTANDAR*/
+@media (max-width: 1366px) {
+    #introduccion, .experiencia, .proyectos {
+        flex: 0 1 45%; /* Mantiene las columnas en la PC */
+    }
+}
+
+/* LA TABLETA */
+@media (max-width: 1024px) {
+    .contenedor-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #introduccion, .experiencia, .proyectos {
+        flex: 0 1 90%; /* Cambia a una columna en tabletas */
+    }
+
+    h2 {
+        font-size: 22px; /* Ajusta el tamaño de encabezados */
+    }
+}
+
+/* MINI SMARTPHONE */
+@media (max-width: 568px) {
+    body {
+        font-size: 14px; /* Aumenta el tamaño de fuente base para los celus */
+    }
+
+    #contacto {
+        width: 90%; /* Ajusta el ancho en móviles */
+        left: 5%; /* Margen lateral */
+        bottom: 10px; /* Ajusta la posición inferior */
+        padding: 10px; /* Aumenta la lista de espacio interno para mejor toque */
+    }
+
+    .contenedor-flex {
+        gap: 10px; /* Reduce el espacio entre elementos en los celus */
+    }
+
+    #introduccion, .experiencia, .proyectos {
+        flex: 0 1 100%; /* Ocupan todo el ancho en los celus */
+    }
+
+    h2 {
+        font-size: 20px; /* Ajusta tamaño de encabezados */
+    }
+
+    p, ul {
+        margin: 15px 0; /* Reduce el margen en párrafos y listas */
+    }
 }
